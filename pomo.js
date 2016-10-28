@@ -80,7 +80,7 @@ $(document).ready(function(){
             if(initSession === 1 && currentSessionLength !== 0){
                 initSession = 0;
 
-                $('#displayTitle').text('Session Length');
+                $('#displayTitle').text('Status: Session');
                 $('#displayTimer').text(convert(currentSessionLength));
                 console.log(convert(currentSessionLength));
             }
@@ -88,7 +88,7 @@ $(document).ready(function(){
             else if(currentSessionLength > 0 && currentBreakLength > 0){
                 currentSessionLength--;
 
-                $('#displayTitle').text('Session Length');
+                $('#displayTitle').text('Status: Session');
                 $('#displayTimer').text(convert(currentSessionLength));
                 console.log(convert(currentSessionLength));
             }
@@ -97,7 +97,7 @@ $(document).ready(function(){
                 audio.play();
                 initBreak = 0;
                 
-                $('#displayTitle').text('Break Length');
+                $('#displayTitle').text('Status: Break');
                 $('#displayTimer').text(convert(currentBreakLength));
                 console.log(convert(currentBreakLength));
             }
@@ -105,7 +105,7 @@ $(document).ready(function(){
             else if(currentSessionLength === 0 && currentBreakLength > 0){
                 currentBreakLength--;
                 
-                $('#displayTitle').text('Break Length');
+                $('#displayTitle').text('Status: Break');
                 $('#displayTimer').text(convert(currentBreakLength));
                 console.log(convert(currentBreakLength));
             }
@@ -117,7 +117,7 @@ $(document).ready(function(){
                 currentBreakLength = totalBreakLength;
                 initBreak = 1;
                 
-                $('#currentTitle').text('Session Length');
+                $('#displayTitle').text('Status: Session');
                 $('#displayTimer').text(convert(currentSessionLength));
                 console.log(convert(currentSessionLength));
             }
